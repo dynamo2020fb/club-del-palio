@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 60" width="100%" height="100%" fill="none">
+  <!-- Sombra / Glow sutil automotriz -->
+  <filter id="calco-glow" x="-10%" y="-10%" width="120%" height="120%">
+    <feDropShadow dx="0" dy="0" stdDeviation="1.5" flood-color="#ffffff" flood-opacity="0.3"/>
+  </filter>
+
+  <!-- Silueta Carrocería Fiat Palio (Arco Superior de Techo) -->
+  <path d="M 76 36 C 80 23, 94 7, 108 5 L 232 5 C 248 5, 260 17, 274 36" 
+        stroke="#ffffff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#calco-glow)"/>
+
+  <!-- Texto Principal: www.clubdelpalio.com (Eurostile Extended Bold Italic Style) -->
+  <text x="175" y="36" text-anchor="middle" 
+        font-family="'Eurostile', 'Eurostile Extended', 'Microgramma', 'Montserrat', 'Arial Black', sans-serif" 
+        font-style="italic" 
+        font-weight="900" 
+        font-size="27" 
+        fill="#ffffff" 
+        stroke="#0d0e0e" 
+        stroke-width="2" 
+        paint-order="stroke fill"
+        letter-spacing="-0.3px">
+    www.clubdelpalio.com
+  </text>
+
+  <!-- Lema Inferior: la pasión que nos une... (Brush Script) -->
+  <text x="195" y="53" text-anchor="middle" 
+        font-family="'Brush Script MT', 'Dancing Script', 'Caveat', 'Segoe Script', cursive, sans-serif" 
+        font-style="italic" 
+        font-size="13.5" 
+        fill="#ffffff" 
+        opacity="0.95" 
+        letter-spacing="0.4px">
+    la pasión que nos une...
+  </text>
+</svg>

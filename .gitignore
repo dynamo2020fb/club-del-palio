@@ -1,0 +1,20 @@
+# Backups y archivos internos del proyecto
+backups/
+.gemini/
+
+# Archivos de sistema
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Archivos de diseño/desarrollo (no necesarios en producción)
+DESIGN.md
+GEMINI.md
+
+# Reportes de auditoría
+*.json
+!package.json
+
+# Archivos temporales
+*.tmp
+*.log
