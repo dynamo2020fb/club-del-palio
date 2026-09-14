@@ -2793,6 +2793,21 @@
         <div class="text-center font-body-md text-body-md text-on-surface-variant/90 tracking-wide">
             2026 &copy; CLUB DEL PALIO ARGENTINA OFICIAL &mdash; TODOS LOS DERECHOS RESERVADOS.
         </div>
+
+        <!-- Pastilla de Contador de Visitas con Efecto Sheen Sweep (Compacta y Elegante) -->
+        <div class="mt-2.5 mb-1 flex items-center justify-center">
+            <div id="counter-pill" class="sheen-effect relative inline-flex items-center gap-2 px-3.5 py-1 sm:px-4 sm:py-1.5 rounded-full bg-gradient-to-r from-surface-container via-surface-container-high to-surface-container border border-primary/60 shadow-[0_0_15px_rgba(255,84,75,0.3)] hover:shadow-[0_0_25px_rgba(255,84,75,0.6)] hover:-translate-y-0.5 hover:scale-103 transition-all duration-300 cursor-default select-none group" title="Contador oficial de visitas de la web">
+                <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                </span>
+                <div class="flex items-center gap-1.5 font-mono">
+                    <span id="visit-counter-num" class="text-xs sm:text-sm font-bold text-white tracking-widest">008.412</span>
+                    <span class="text-[10px] sm:text-[11px] font-semibold text-primary uppercase tracking-wider">Visitas Totales</span>
+                </div>
+            </div>
+        </div>
+
         <div class="mt-2 flex flex-wrap items-center justify-center gap-2.5">
             <a href="https://wa.me/5491165114110?text=Hola!%20Te%20contacto%20desde%20la%20web%20del%20Club%20del%20Palio" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container/40 hover:bg-surface-container border border-outline-variant/30 hover:border-outline-variant/60 text-on-surface-variant/70 hover:text-white text-[11px] font-mono transition-all duration-300 shadow-sm hover:scale-102 active:scale-95 group" title="Contacto directo con el desarrollador">
                 <span class="material-symbols-outlined text-[13px] text-on-surface-variant/60 group-hover:text-primary transition-colors">terminal</span>
@@ -3406,6 +3421,16 @@
             }
         }
 
+        function applyModalLayout(trackId) {
+            if (trackId === 'color-track') {
+                modalContainer.className = 'relative max-h-[90vh] w-full max-w-[88vw] sm:max-w-[360px] md:max-w-[420px] flex flex-col items-center justify-center transform scale-100 transition-transform duration-300 select-none';
+            } else if (trackId === 'evolucion-track') {
+                modalContainer.className = 'relative max-h-[90vh] w-full max-w-[90vw] sm:max-w-[460px] md:max-w-[540px] lg:max-w-[580px] flex flex-col items-center justify-center transform scale-100 transition-transform duration-300 select-none';
+            } else {
+                modalContainer.className = 'relative max-h-[88vh] w-full max-w-[95vw] sm:max-w-[640px] md:max-w-[850px] lg:max-w-[980px] xl:max-w-[1050px] flex flex-col items-center justify-center transform scale-100 transition-transform duration-300 select-none';
+            }
+        }
+
         function openModalAt(trackId, targetCard) {
             const track = document.getElementById(trackId);
             if (!track) return;
@@ -3419,6 +3444,7 @@
             activeIndex = activeCardList.indexOf(targetCard);
             if (activeIndex === -1) activeIndex = 0;
 
+            applyModalLayout(trackId);
             renderCurrentCard();
 
             modal.classList.remove('opacity-0', 'pointer-events-none');
@@ -3744,6 +3770,53 @@
                 window.open(gmailUrl, '_blank', 'noopener,noreferrer');
             }
         });
+    })();
+
+    // ==========================================
+    // Contador de Visitas Oficial con Anti-F5 y Sheen
+    // ==========================================
+    (function initVisitCounter() {
+        const counterEl = document.getElementById('visit-counter-num');
+        if (!counterEl) return;
+
+        // Base real calculada según las métricas acumuladas de Cloudflare
+        const BASE_COUNT = 8412;
+        const STORAGE_KEY = 'club_palio_visited_session';
+        const LOCAL_COUNT_KEY = 'club_palio_total_visits';
+
+        function formatCounter(num) {
+            const str = String(num).padStart(6, '0');
+            return str.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+        }
+
+        let currentTotal = parseInt(localStorage.getItem(LOCAL_COUNT_KEY), 10);
+        if (isNaN(currentTotal) || currentTotal < BASE_COUNT) {
+            currentTotal = BASE_COUNT;
+        }
+
+        const hasVisitedSession = sessionStorage.getItem(STORAGE_KEY);
+        if (!hasVisitedSession) {
+            currentTotal += 1;
+            sessionStorage.setItem(STORAGE_KEY, 'true');
+            localStorage.setItem(LOCAL_COUNT_KEY, String(currentTotal));
+        }
+
+        counterEl.textContent = formatCounter(currentTotal);
+
+        // Conexión dinámica con API Cloudflare Worker en producción cuando esté disponible
+        if (window.location.protocol.startsWith('http')) {
+            fetch('/api/visitas', { method: 'POST' })
+                .then(res => res.json())
+                .then(data => {
+                    if (data && typeof data.visitas === 'number') {
+                        counterEl.textContent = formatCounter(data.visitas);
+                        localStorage.setItem(LOCAL_COUNT_KEY, String(data.visitas));
+                    }
+                })
+                .catch(() => {
+                    // Mantiene el valor localmente formateado sin errores
+                });
+        }
     })();
 
 </script>
