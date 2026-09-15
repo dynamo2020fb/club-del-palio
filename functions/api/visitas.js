@@ -22,7 +22,7 @@ export async function onRequest(context) {
   }
 
   const KV_KEY = 'total_visitas_web';
-  const INITIAL_BASE = 8412;
+  const INITIAL_BASE = 1210;
 
   try {
     const kv = env.COUNTER_KV || env.CLUB_COUNTER_KV;

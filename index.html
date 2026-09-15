@@ -3783,8 +3783,8 @@
         const counterEl = document.getElementById('visit-counter-num');
         if (!counterEl) return;
 
-        // Base real calculada según las métricas históricas del Club
-        const BASE_COUNT = 8412;
+        // Base real calculada según las métricas oficiales de Cloudflare Analytics
+        const BASE_COUNT = 1210;
         const STORAGE_KEY = 'club_palio_visited_session';
         const LOCAL_COUNT_KEY = 'club_palio_total_visits';
 
@@ -3826,7 +3826,7 @@
         }
 
         // Si fue primera visita de la sesión o inicio, animar suavemente los últimos números
-        const startVal = Math.max(BASE_COUNT, currentTotal - (wasIncremented ? 8 : 4));
+        const startVal = Math.max(BASE_COUNT, currentTotal - (wasIncremented ? 6 : 2));
         animateCounter(startVal, currentTotal, 1400);
 
         // Conexión dinámica con API Cloudflare Worker en producción cuando esté disponible
@@ -3860,7 +3860,7 @@
             localStorage.removeItem(LOCAL_COUNT_KEY);
             sessionStorage.removeItem(STORAGE_KEY);
             counterEl.textContent = formatCounter(BASE_COUNT);
-            console.log('🔄 Contador reiniciado a la base:', BASE_COUNT);
+            console.log('🔄 Contador reiniciado a la base real de Cloudflare:', BASE_COUNT);
         };
     })();
 
