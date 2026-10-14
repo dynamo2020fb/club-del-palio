@@ -829,6 +829,7 @@
             <a class="header-pill desktop-nav-link font-label-md text-[11px] xl:text-xs font-bold px-3.5 py-1.5 rounded-full uppercase tracking-wider" href="#proyecto178">Hitos</a>
             <a class="header-pill desktop-nav-link font-label-md text-[11px] xl:text-xs font-bold px-3.5 py-1.5 rounded-full uppercase tracking-wider" href="#encuentros">Encuentros</a>
             <a class="header-pill desktop-nav-link font-label-md text-[11px] xl:text-xs font-bold px-3.5 py-1.5 rounded-full uppercase tracking-wider" href="#videos">Videos</a>
+            <a class="header-pill desktop-nav-link font-label-md text-[11px] xl:text-xs font-bold px-3.5 py-1.5 rounded-full uppercase tracking-wider" href="#blog">Blog</a>
             <a class="header-pill desktop-nav-link font-label-md text-[11px] xl:text-xs font-bold px-3.5 py-1.5 rounded-full uppercase tracking-wider inline-flex items-center gap-0.5" href="#evolucion">
                 <span>Evolución</span>
                 <span class="material-symbols-outlined text-[14px] text-gray-400">chevron_right</span>
@@ -860,6 +861,7 @@
                 <a class="header-pill mobile-nav-link font-label-md text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider" href="#proyecto178">Hitos</a>
                 <a class="header-pill mobile-nav-link font-label-md text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider" href="#encuentros">Encuentros</a>
                 <a class="header-pill mobile-nav-link font-label-md text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider" href="#videos">Videos</a>
+                <a class="header-pill mobile-nav-link font-label-md text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider" href="#blog">Blog</a>
                 <a class="header-pill mobile-nav-link font-label-md text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider inline-flex items-center gap-0.5" href="#evolucion">
                     <span>Evolución</span>
                     <span class="material-symbols-outlined text-[13px] text-gray-400">chevron_right</span>
@@ -1960,6 +1962,225 @@
     </div>
 </section>
 
+
+<!-- Blog Oficial • Artículos, Crónicas & Legado Industrial (Carrusel Único con Índice) -->
+<section id="blog" class="relative py-12 md:py-20 px-gutter md:px-margin-desktop bg-surface-container border-t border-b border-outline-variant/30 scroll-mt-[112px] md:scroll-mt-16 overflow-hidden">
+    <div class="absolute inset-0 carbon-pattern opacity-20"></div>
+    <div class="relative z-10 max-w-7xl mx-auto flex flex-col gap-6 md:gap-8">
+        
+        <!-- Header de Sección -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 machined-edge pt-4">
+            <div>
+                <div class="font-mono text-xs text-primary font-bold tracking-widest uppercase flex items-center gap-2 mb-1">
+                    <span class="inline-block w-2 h-2 bg-primary rounded-full animate-pulse"></span>
+                    EDITORIAL & HISTORIA • INVESTIGACIÓN OFICIAL
+                </div>
+                <div class="flex items-center gap-3">
+                    <h3 class="font-headline-lg text-2xl md:text-headline-lg text-primary uppercase tracking-tight">BLOG DEL CLUB</h3>
+                    <span class="material-symbols-outlined text-2xl md:text-3xl text-primary shrink-0">auto_stories</span>
+                </div>
+                <p class="font-body-md text-on-surface-variant text-sm mt-1 max-w-2xl">
+                    Artículos, crónicas de ingeniería y el legado del Fiat Palio explicados por y para entusiastas.
+                </p>
+            </div>
+            
+            <!-- Controles del Carrusel Principal -->
+            <div class="flex items-center gap-3">
+                <span id="blog-carousel-counter" class="text-xs font-mono font-bold text-primary px-3 py-1 bg-surface rounded border border-outline-variant/40 shadow-sm">01 / 02</span>
+                <button id="blog-carousel-prev-btn" class="w-9 h-9 rounded-full bg-surface hover:bg-primary text-on-surface hover:text-white flex items-center justify-center border border-outline-variant/50 transition-all shadow cursor-pointer active:scale-95" aria-label="Artículo anterior">
+                    <span class="material-symbols-outlined text-base">chevron_left</span>
+                </button>
+                <button id="blog-carousel-next-btn" class="w-9 h-9 rounded-full bg-surface hover:bg-primary text-on-surface hover:text-white flex items-center justify-center border border-outline-variant/50 transition-all shadow cursor-pointer active:scale-95" aria-label="Artículo siguiente">
+                    <span class="material-symbols-outlined text-base">chevron_right</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Índice de Artículos con Pastillas (Foto 2: Títulos de los Temas) -->
+        <div class="flex flex-wrap items-center gap-2 pb-1" id="blog-index-tabs" role="tablist" aria-label="Índice de artículos">
+            <button type="button" class="blog-tab-pill active-blog-tab px-4 py-1.5 rounded-full border border-primary bg-primary/15 text-primary font-mono text-xs font-bold uppercase tracking-wider transition-all cursor-pointer shadow-[0_0_15px_rgba(255,59,48,0.35)]" data-slide="all">
+                TODAS
+            </button>
+            <button type="button" class="blog-tab-pill px-4 py-1.5 rounded-full border border-outline-variant/50 hover:border-primary/60 text-on-surface-variant hover:text-white font-mono text-xs font-bold uppercase tracking-wider transition-all cursor-pointer" data-slide="0">
+                PROYECTO 178
+            </button>
+            <button type="button" class="blog-tab-pill px-4 py-1.5 rounded-full border border-outline-variant/50 hover:border-primary/60 text-on-surface-variant hover:text-white font-mono text-xs font-bold uppercase tracking-wider transition-all cursor-pointer" data-slide="1">
+                MOTOR FIRE
+            </button>
+            <button type="button" class="blog-tab-pill px-4 py-1.5 rounded-full border border-outline-variant/50 hover:border-primary/60 text-on-surface-variant hover:text-white font-mono text-xs font-bold uppercase tracking-wider transition-all cursor-pointer opacity-70" data-slide="2">
+                PRÓXIMAMENTE
+            </button>
+        </div>
+
+        <!-- CARRUSEL HORIZONTAL ÚNICO (Tarjetas Panorámicas Completas, Fotos 100% Despejadas) -->
+        <div id="blog-main-track" class="flex gap-6 overflow-x-auto pb-4 pt-1 scrollbar-hide snap-x snap-mandatory scroll-smooth cursor-grab select-none">
+            
+            <!-- TARJETA 1: PROYECTO 178 -->
+            <article id="card-blog-0" class="w-full min-w-full lg:min-w-full snap-start group bg-surface border border-outline-variant/40 hover:border-primary/80 rounded-2xl overflow-hidden transition-all duration-300 card-glow shadow-xl flex flex-col lg:flex-row shrink-0" data-card-index="0">
+                
+                <!-- Columna Imagen Portada (16:9 - Sin carteles arriba para no tapar el plano) -->
+                <div class="lg:w-1/2 relative overflow-hidden bg-black min-h-[260px] sm:min-h-[320px] lg:min-h-[380px] cursor-pointer" onclick="openBlogModal('proyecto178')">
+                    <img loading="lazy" decoding="async" src="img/blog/proyecto178_cover.webp" alt="Proyecto 178: Bocetos de diseño conceptual y desarrollo Fiat Palio" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-background/95 via-transparent to-transparent pointer-events-none"></div>
+
+                    <!-- Solo tiempo de lectura abajo a la izquierda -->
+                    <div class="absolute bottom-4 left-4 flex items-center gap-2">
+                        <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-black/85 backdrop-blur-md text-primary border border-primary/40 text-xs font-mono font-bold shadow-md">
+                            <span class="material-symbols-outlined text-sm">timer</span>
+                            <span class="blog-reading-time-badge">6 min de lectura</span>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Columna Contenido Editorial -->
+                <div class="p-6 md:p-8 lg:w-1/2 flex flex-col justify-between gap-6">
+                    <div class="flex flex-col gap-3">
+                        <div class="flex items-center justify-between gap-2 text-xs font-mono text-on-surface-variant">
+                            <span class="text-primary font-bold tracking-wider uppercase">TURÍN & MERCOSUR • WORLD CAR</span>
+                            <span class="px-2 py-0.5 rounded bg-surface-container border border-outline-variant/30 text-[11px]">30º ANIVERSARIO (1996 - 2026)</span>
+                        </div>
+                        
+                        <h4 class="font-headline-md text-xl md:text-2xl font-bold text-white uppercase group-hover:text-primary transition-colors cursor-pointer leading-tight" onclick="openBlogModal('proyecto178')">
+                            Proyecto 178: La ingeniería global e industrial que redefinió a Fiat en cuatro continentes
+                        </h4>
+
+                        <p class="font-body-md text-on-surface-variant text-sm sm:text-base leading-relaxed line-clamp-3 md:line-clamp-4">
+                            A mediados de la década de 1990, bajo el liderazgo estratégico de Paolo Cantarella en Turín, la firma italiana Fiat ejecutó una de las inversiones más ambiciosas de la historia automotriz moderna. Concebido desde cero para desafiar la severidad de los caminos en mercados emergentes, el Proyecto 178 no solo sustituyó al Fiat Uno, sino que creó una familia modular insuperable.
+                        </p>
+
+                        <!-- Puntos destacados rápidos -->
+                        <div class="grid grid-cols-2 gap-2 pt-2">
+                            <div class="bg-surface-container p-2.5 rounded-lg border border-outline-variant/30 flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary text-base">architecture</span>
+                                <span class="font-mono text-xs text-white">4 Carrocerías Modulares</span>
+                            </div>
+                            <div class="bg-surface-container p-2.5 rounded-lg border border-outline-variant/30 flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary text-base">public</span>
+                                <span class="font-mono text-xs text-white">Fabricado en 4 Continentes</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Footer de la tarjeta con Autor, Mención IA y Botón de Apertura -->
+                    <div class="pt-4 border-t border-outline-variant/30 flex flex-wrap items-center justify-between gap-3">
+                        <div class="flex items-center gap-2.5">
+                            <div class="w-9 h-9 rounded-full bg-primary/20 border border-primary text-primary flex items-center justify-center font-bold text-xs shadow-sm">
+                                CP
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="font-mono text-xs font-bold text-white">Redacción Club del Palio</span>
+                                <span class="font-mono text-[10px] text-on-surface-variant flex items-center gap-1">
+                                    <span class="material-symbols-outlined text-[13px] text-primary">smart_toy</span>
+                                    <span>Investigación asistida con IA • Curaduría Club</span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <button type="button" onclick="openBlogModal('proyecto178')" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary hover:bg-primary-container text-white font-headline-md text-xs font-bold uppercase tracking-wider transition-all duration-200 shadow-md hover:shadow-[0_0_15px_rgba(255,59,48,0.5)] cursor-pointer group/btn">
+                            <span>Leer artículo completo</span>
+                            <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
+                        </button>
+                    </div>
+
+                </div>
+            </article>
+
+            <!-- TARJETA 2: MOTOR FIRE (Con Foto Oficial Real, Sin Carteles Arriba) -->
+            <article id="card-blog-1" class="w-full min-w-full lg:min-w-full snap-start group bg-surface border border-outline-variant/40 hover:border-primary/80 rounded-2xl overflow-hidden transition-all duration-300 card-glow shadow-xl flex flex-col lg:flex-row shrink-0" data-card-index="1">
+                
+                <!-- Columna Imagen Portada (16:9 vano motor real limpio, sin carteles arriba) -->
+                <div class="lg:w-1/2 relative overflow-hidden bg-black min-h-[260px] sm:min-h-[320px] lg:min-h-[380px] cursor-pointer" onclick="openBlogModal('motorfire')">
+                    <img loading="lazy" decoding="async" src="img/blog/motor_fire_real_cover.webp" alt="Vano motor Fiat FIRE 1.4 8v en Fiat Palio" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-background/95 via-transparent to-transparent pointer-events-none"></div>
+
+                    <!-- Solo tiempo de lectura abajo a la izquierda -->
+                    <div class="absolute bottom-4 left-4 flex items-center gap-2">
+                        <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-black/85 backdrop-blur-md text-primary border border-primary/40 text-xs font-mono font-bold shadow-md">
+                            <span class="material-symbols-outlined text-sm">timer</span>
+                            <span class="fire-reading-badge">5 min de lectura</span>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Columna Contenido Editorial -->
+                <div class="p-6 md:p-8 lg:w-1/2 flex flex-col justify-between gap-6">
+                    <div class="flex flex-col gap-3">
+                        <div class="flex items-center justify-between gap-2 text-xs font-mono text-on-surface-variant">
+                            <span class="text-primary font-bold tracking-wider uppercase">F.I.R.E. • TÉRMOLI A CÓRDOBA</span>
+                            <span class="px-2 py-0.5 rounded bg-surface-container border border-outline-variant/30 text-[11px]">2001 — 2020 EN PALIO</span>
+                        </div>
+                        
+                        <h4 class="font-headline-md text-xl md:text-2xl font-bold text-white uppercase group-hover:text-primary transition-colors cursor-pointer leading-tight" onclick="openBlogModal('motorfire')">
+                            Corazón de hierro: La historia del motor Fiat FIRE, de Turín al rey del asfalto argentino
+                        </h4>
+
+                        <p class="font-body-md text-on-surface-variant text-sm sm:text-base leading-relaxed line-clamp-3 md:line-clamp-4">
+                            Nacido en las líneas robotizadas italianas como un hito de la automatización industrial, el motor FIRE cruzó el océano para convertirse en el corazón mecánico más vendido, noble y duradero de las calles argentinas. El análisis completo del 1.3 16v, el reinado del 1.4 8v a GNC y la evolución EVO.
+                        </p>
+
+                        <!-- Puntos destacados rápidos -->
+                        <div class="grid grid-cols-2 gap-2 pt-2">
+                            <div class="bg-surface-container p-2.5 rounded-lg border border-outline-variant/30 flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary text-base">precision_manufacturing</span>
+                                <span class="font-mono text-xs text-white">100% Robotizado (Comau)</span>
+                            </div>
+                            <div class="bg-surface-container p-2.5 rounded-lg border border-outline-variant/30 flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary text-base">local_gas_station</span>
+                                <span class="font-mono text-xs text-white">El Rey del GNC y Taxis</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Footer de la tarjeta con Autor, Mención IA y Botón de Apertura -->
+                    <div class="pt-4 border-t border-outline-variant/30 flex flex-wrap items-center justify-between gap-3">
+                        <div class="flex items-center gap-2.5">
+                            <div class="w-9 h-9 rounded-full bg-primary/20 border border-primary text-primary flex items-center justify-center font-bold text-xs shadow-sm">
+                                CP
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="font-mono text-xs font-bold text-white">Redacción Club del Palio</span>
+                                <span class="font-mono text-[10px] text-on-surface-variant flex items-center gap-1">
+                                    <span class="material-symbols-outlined text-[13px] text-primary">smart_toy</span>
+                                    <span>Investigación asistida con IA • Curaduría Club</span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <button type="button" onclick="openBlogModal('motorfire')" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary hover:bg-primary-container text-white font-headline-md text-xs font-bold uppercase tracking-wider transition-all duration-200 shadow-md hover:shadow-[0_0_15px_rgba(255,59,48,0.5)] cursor-pointer group/btn">
+                            <span>Leer artículo completo</span>
+                            <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
+                        </button>
+                    </div>
+
+                </div>
+            </article>
+
+            <!-- TARJETA 3: PRÓXIMAMENTE (Espacio Reservado Oficial, Cero Historias Inventadas) -->
+            <article id="card-blog-2" class="w-full min-w-full lg:min-w-full snap-start group bg-surface/40 border-2 border-dashed border-outline-variant/50 hover:border-primary/60 rounded-2xl overflow-hidden transition-all duration-300 shadow-md flex flex-col lg:flex-row shrink-0 items-center justify-center p-8 sm:p-14 text-center" data-card-index="2">
+                <div class="max-w-md flex flex-col items-center gap-3">
+                    <div class="w-16 h-16 rounded-full bg-surface-container border border-outline-variant/50 flex items-center justify-center text-primary shadow-inner">
+                        <span class="material-symbols-outlined text-3xl">edit_note</span>
+                    </div>
+                    <span class="font-mono text-xs font-bold text-primary tracking-widest uppercase">
+                        ESPACIO EDITORIAL RESERVADO
+                    </span>
+                    <h4 class="font-headline-md text-xl sm:text-2xl font-bold text-white uppercase">
+                        Próxima crónica en preparación
+                    </h4>
+                    <p class="font-body-md text-sm text-on-surface-variant leading-relaxed">
+                        El equipo del Club del Palio se encuentra investigando y redactando nuevas notas históricas y guías de mantenimiento técnico.
+                    </p>
+                    <span class="inline-block mt-2 font-mono text-[11px] text-on-surface-variant/70 border border-outline-variant/30 px-3 py-1 rounded-full">
+                        Sección en actualización constante
+                    </span>
+                </div>
+            </article>
+
+        </div>
+
+    </div>
+</section>
+
 <!-- El Garaje -->
 <section class="relative py-10 md:py-20 px-gutter md:px-margin-desktop bg-surface overflow-hidden">
     <div class="absolute inset-0 carbon-pattern opacity-20"></div>
@@ -2870,6 +3091,398 @@
     </div>
 </div>
 
+<!-- Modal Visor de Lectura In-Page (Blog Reader) -->
+<div id="blog-modal" class="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 md:p-6 opacity-0 pointer-events-none transition-all duration-300 bg-black/90 backdrop-blur-md" role="dialog" aria-modal="true" aria-label="Visor de lectura del blog">
+    
+    <div id="blog-modal-container" class="relative w-full max-w-4xl max-h-[92vh] bg-[#161818] border border-outline-variant/60 rounded-2xl shadow-[0_0_60px_rgba(0,0,0,0.9)] overflow-hidden flex flex-col card-glow transform scale-95 transition-transform duration-300">
+        
+        <!-- Top Bar Sticky -->
+        <div class="sticky top-0 z-30 bg-[#121414]/95 backdrop-blur-md px-4 sm:px-6 py-3 border-b border-outline-variant/40 flex items-center justify-between gap-3">
+            <div class="flex items-center gap-2 sm:gap-3 truncate">
+                <span id="blog-modal-category-badge" class="bg-primary/20 text-primary border border-primary/40 px-2.5 py-0.5 rounded text-[10px] sm:text-xs font-mono font-bold uppercase tracking-wider shrink-0">
+                    HISTORIA INDUSTRIAL
+                </span>
+                <span class="inline-flex items-center gap-1 font-mono text-[11px] sm:text-xs text-on-surface-variant shrink-0">
+                    <span class="material-symbols-outlined text-sm text-primary">schedule</span>
+                    <span id="blog-modal-header-time-badge" class="text-primary font-bold">Calculando...</span>
+                </span>
+            </div>
+
+            <!-- Botón Cerrar Superior -->
+            <button type="button" onclick="closeBlogModal()" class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container border border-outline-variant/60 hover:border-primary text-on-surface hover:text-white transition-all text-xs font-mono font-bold cursor-pointer shrink-0" aria-label="Cerrar artículo">
+                <span class="material-symbols-outlined text-base">close</span>
+                <span class="hidden sm:inline">CERRAR (ESC)</span>
+            </button>
+        </div>
+
+        <!-- Contenedor Scrollable del Contenido del Artículo -->
+        <div id="blog-modal-scrollable" class="overflow-y-auto px-4 sm:px-8 md:px-12 py-6 sm:py-8 space-y-6 text-on-surface scroll-smooth">
+            
+            <!-- VISTA 1: ARTÍCULO PROYECTO 178 -->
+            <div id="article-view-proyecto178" class="blog-article-view space-y-6">
+                <!-- Encabezado del Artículo -->
+                <div class="space-y-3 border-b border-outline-variant/30 pb-6">
+                <div class="flex flex-wrap items-center gap-2 font-mono text-xs text-primary font-bold">
+                    <span>TURÍN, ITALIA</span>
+                    <span>•</span>
+                    <span>CENTRO STILE FIAT & I.DE.A INSTITUTE</span>
+                    <span>•</span>
+                    <span class="text-white bg-primary/20 border border-primary/40 px-2 py-0.5 rounded">30º ANIVERSARIO</span>
+                </div>
+                
+                <h1 class="font-headline-lg text-2xl sm:text-3xl md:text-4xl text-white font-extrabold uppercase tracking-tight leading-tight">
+                    Proyecto 178: La ingeniería global e industrial que redefinió a Fiat en cuatro continentes
+                </h1>
+
+                <p class="font-body-lg text-base sm:text-lg text-on-surface-variant font-medium leading-relaxed italic border-l-4 border-primary pl-4 py-1">
+                    A mediados de la década de 1990, bajo el liderazgo estratégico de Paolo Cantarella en Turín, la firma italiana Fiat ejecutó una de las inversiones industriales más ambiciosas de la historia automotriz moderna. Concebido desde cero para desafiar la severidad de los caminos en mercados emergentes, el <strong>Proyecto 178</strong> no solo sustituyó con honores al legendario Fiat Uno, sino que estableció un nuevo paradigma de modularidad, resistencia estructural y alcance multicultural.
+                </p>
+
+                <div class="flex items-center gap-3 pt-2 text-xs font-mono text-on-surface-variant">
+                    <span>Por: <strong>Redacción Club del Palio</strong></span>
+                    <span>•</span>
+                    <span>Publicado: <strong>2026 (30º Aniversario 1996-2026)</strong></span>
+                </div>
+            </div>
+
+            <!-- Imagen Destacada del Artículo -->
+            <div class="space-y-2">
+                <div class="rounded-xl overflow-hidden border border-outline-variant/40 shadow-xl bg-black">
+                    <img loading="lazy" decoding="async" src="img/blog/proyecto178_cover.webp" alt="Fiat Palio Proyecto 178 Boceto de diseño y silueta técnica" class="w-full h-auto max-h-[440px] object-cover">
+                </div>
+                <p class="text-center font-mono text-xs text-on-surface-variant italic">
+                    Boceto de diseño conceptual en Turín (Centro Stile Fiat e I.DE.A Institute) y silueta del Fiat Palio G1 original.
+                </p>
+            </div>
+
+            <!-- Cuerpo del Artículo Completo (Texto para Cálculo Automático y Lectura) -->
+            <div id="blog-article-full-text" class="space-y-8 text-on-surface/90 font-body-md text-base sm:text-lg leading-relaxed">
+                
+                <!-- SECCIÓN 1 -->
+                <section class="space-y-3">
+                    <h2 class="font-headline-md text-xl sm:text-2xl text-primary font-bold uppercase tracking-tight flex items-center gap-2">
+                        <span class="w-1.5 h-6 bg-primary rounded-full inline-block"></span>
+                        1. El Concepto World Car: La visión global de Turín
+                    </h2>
+                    <p>
+                        En los años 90, la apertura económica global exigía a los fabricantes concebir vehículos universales en lugar de adaptar modelos diseñados estrictamente para los requerimientos europeos. Tras desestimar la exportación del Fiat Punto por considerar que su arquitectura requería adecuaciones estructurales para el mal estado de la red vial en regiones en desarrollo, el CEO de Fiat, Paolo Cantarella, impulsó la creación de un verdadero <em>World Car</em>.
+                    </p>
+                    <p>
+                        La premisa de ingeniería priorizó un chasis versátil, económico de producir en gran escala, térmicamente eficiente y con una rigidez torsional capaz de asimilar condiciones climáticas y geográficas extremas sin perder refinamiento dinámico.
+                    </p>
+                </section>
+
+                <!-- SECCIÓN 2 -->
+                <section class="space-y-4">
+                    <h2 class="font-headline-md text-xl sm:text-2xl text-primary font-bold uppercase tracking-tight flex items-center gap-2">
+                        <span class="w-1.5 h-6 bg-primary rounded-full inline-block"></span>
+                        2. Arquitectura y Diseño Modular: El sello de Centro Stile e I.DE.A Institute
+                    </h2>
+                    <p>
+                        El desarrollo estético y la optimización aerodinámica fueron encomendados al prestigioso <strong>I.DE.A Institute</strong> (<em>Institute of Development in Automotive Engineering</em>) en Turín, en colaboración directa con el <strong>Centro Stile Fiat</strong>. Distanciándose de los trazos rectangulares de los años 80, los diseñadores concibieron una silueta fluida con un capó marcadamente ascendente que se integraba de forma continua con un amplio parabrisas inclinado.
+                    </p>
+                    <p>
+                        La gran genialidad técnica del Proyecto 178 residió en su matriz estructural modular compartida: a partir de un mismo piso básico, sección frontal y estampado de parabrisas, la marca derivó cuatro variantes de carrocería identificadas bajo códigos industriales específicos:
+                    </p>
+
+                    <!-- Tarjetas de las 4 Carrocerías -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+                        <div class="bg-surface-container p-4 rounded-xl border border-outline-variant/40 space-y-1">
+                            <span class="font-mono text-xs font-bold text-primary block">TIPO 178A</span>
+                            <h3 class="font-headline-md text-sm font-bold text-white uppercase">Fiat Palio</h3>
+                            <p class="text-xs text-on-surface-variant">Hatchback de 3 y 5 puertas, concebido como el núcleo ágil y de alto volumen de ventas del segmento B.</p>
+                        </div>
+                        <div class="bg-surface-container p-4 rounded-xl border border-outline-variant/40 space-y-1">
+                            <span class="font-mono text-xs font-bold text-primary block">TIPO 178B</span>
+                            <h3 class="font-headline-md text-sm font-bold text-white uppercase">Fiat Siena / Albea / Petra</h3>
+                            <p class="text-xs text-on-surface-variant">Sedán tricuerpo de 4 puertas, sucesor funcional del Fiat Duna y orientado a las demandas familiares.</p>
+                        </div>
+                        <div class="bg-surface-container p-4 rounded-xl border border-outline-variant/40 space-y-1">
+                            <span class="font-mono text-xs font-bold text-primary block">TIPO 178C</span>
+                            <h3 class="font-headline-md text-sm font-bold text-white uppercase">Fiat Palio Weekend</h3>
+                            <p class="text-xs text-on-surface-variant">Station wagon o rural de 5 puertas, destacada por su notable volumen de carga y perfil rutero.</p>
+                        </div>
+                        <div class="bg-surface-container p-4 rounded-xl border border-outline-variant/40 space-y-1">
+                            <span class="font-mono text-xs font-bold text-primary block">TIPO 178E</span>
+                            <h3 class="font-headline-md text-sm font-bold text-white uppercase">Fiat Strada</h3>
+                            <p class="text-xs text-on-surface-variant">Pick-up liviana comercial, provista de una plataforma de carga trasera altamente versátil y líder de ventas.</p>
+                        </div>
+                    </div>
+
+                    <p class="text-sm bg-surface-container/60 p-3 rounded-lg border-l-2 border-primary text-on-surface-variant">
+                        💡 <strong>Detalle de diseño:</strong> Para maximizar la capacidad útil del baúl en las distintas variantes, el equipo de ingenieros reubicó la rueda de repuesto por debajo del piso exterior de la caja posterior.
+                    </p>
+                </section>
+
+                <!-- SECCIÓN 3 -->
+                <section class="space-y-4">
+                    <h2 class="font-headline-md text-xl sm:text-2xl text-primary font-bold uppercase tracking-tight flex items-center gap-2">
+                        <span class="w-1.5 h-6 bg-primary rounded-full inline-block"></span>
+                        3. Una Red Industrial Multinacional: Fabricación en 4 Continentes
+                    </h2>
+                    <p>
+                        Para materializar este despliegue global, Fiat tejió una red fabril multinacional que integró plantas en cuatro continentes con estándares de calidad estandarizados:
+                    </p>
+                    <ul class="space-y-2.5 text-sm sm:text-base list-none pl-0">
+                        <li class="bg-surface-container p-3 rounded-lg border border-outline-variant/30 flex gap-2.5 items-start">
+                            <span class="material-symbols-outlined text-primary text-lg shrink-0 mt-0.5">public</span>
+                            <div>
+                                <strong class="text-white font-semibold">América Latina:</strong> La producción dio inicio en abril de 1996 en la megaplanta de <strong>Betim (Brasil)</strong>, seguida inmediatamente por el complejo de <strong>Ferreyra en Córdoba (Argentina)</strong>, especializado en la fabricación del sedán Siena. Posteriormente, la línea se ensambló también en Venezuela.
+                            </div>
+                        </li>
+                        <li class="bg-surface-container p-3 rounded-lg border border-outline-variant/30 flex gap-2.5 items-start">
+                            <span class="material-symbols-outlined text-primary text-lg shrink-0 mt-0.5">location_city</span>
+                            <div>
+                                <strong class="text-white font-semibold">Europa Oriental y Medio Oriente:</strong> Se fabricó en las plantas de <strong>Tychy y Bielsko-Biała (Polonia)</strong> y en las instalaciones de <strong>Tofaş en Bursa (Turquía)</strong>, abasteciendo a diversos mercados europeos y mediterráneos. Asimismo, el modelo contó con centros de ensamblaje CKD en <strong>Saveh (Irán)</strong>.
+                            </div>
+                        </li>
+                        <li class="bg-surface-container p-3 rounded-lg border border-outline-variant/30 flex gap-2.5 items-start">
+                            <span class="material-symbols-outlined text-primary text-lg shrink-0 mt-0.5">factory</span>
+                            <div>
+                                <strong class="text-white font-semibold">África y Asia:</strong> Se instalaron líneas productivas en <strong>Rosslyn (Sudáfrica)</strong>, <strong>Casablanca / SOMACA (Marruecos)</strong>, <strong>Ranjangaon / Pune (India)</strong> y <strong>Nanjing (China)</strong>.
+                            </div>
+                        </li>
+                        <li class="bg-surface-container p-3 rounded-lg border border-outline-variant/30 flex gap-2.5 items-start">
+                            <span class="material-symbols-outlined text-primary text-lg shrink-0 mt-0.5">badge</span>
+                            <div>
+                                <strong class="text-white font-semibold">Mercados especiales y licencias:</strong> La plataforma fue producida bajo licencia en Corea del Norte por la firma Pyonghwa Motors bajo el nombre <em>Pyonghwa Hwiparam</em>, ensamblada en Rusia por Severstal-Auto y desarrollada comercialmente en China a través de Zotye Auto.
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- SECCIÓN 4 -->
+                <section class="space-y-4">
+                    <h2 class="font-headline-md text-xl sm:text-2xl text-primary font-bold uppercase tracking-tight flex items-center gap-2">
+                        <span class="w-1.5 h-6 bg-primary rounded-full inline-block"></span>
+                        4. Soluciones de Ingeniería: Rigidez, Chasis y Evolución Motriz
+                    </h2>
+                    <p>
+                        Desde la perspectiva de la ingeniería mecánica, el Proyecto 178 incorporó soluciones avanzadas para garantizar durabilidad técnica en el uso intensivo:
+                    </p>
+
+                    <div class="space-y-3">
+                        <div class="border-l-2 border-primary/70 pl-3 py-1">
+                            <h3 class="font-headline-md text-sm font-bold text-white uppercase">Rigidez Torsional y Pilar C Sobredimensionado</h3>
+                            <p class="text-sm text-on-surface-variant mt-0.5">Teniendo en cuenta la severidad de las superficies sin pavimentar, los ingenieros diseñaron un pilar C reforzado. Esta solución aportó un incremento sustancial en la resistencia torsional de la estructura, protegiendo el habitáculo frente a colisiones y deformaciones del chasis.</p>
+                        </div>
+
+                        <div class="border-l-2 border-primary/70 pl-3 py-1">
+                            <h3 class="font-headline-md text-sm font-bold text-white uppercase">Geometría de Suspensión Reforzada</h3>
+                            <p class="text-sm text-on-surface-variant mt-0.5">El esquema de suspensión delantera fue configurado con componentes de mayor tenacidad para absorber impactos de calzadas deterioradas y empedrados.</p>
+                        </div>
+
+                        <div class="border-l-2 border-primary/70 pl-3 py-1">
+                            <h3 class="font-headline-md text-sm font-bold text-white uppercase">Diversidad de Planta Motriz</h3>
+                            <ul class="list-disc list-inside text-sm text-on-surface-variant space-y-1 mt-1">
+                                <li><strong>Motor 1.6 16v Torque:</strong> Propulsor de cuatro válvulas por cilindro y 103 a 106 CV importado directamente de Italia, reconocido por sus prestaciones y elasticidad de marcha.</li>
+                                <li><strong>Motores Diésel y Turbodiésel 1.7:</strong> Variantes de gran autonomía y elevado torque a bajo régimen para mercados con alta demanda del ciclo Diésel.</li>
+                                <li><strong>Familia FIRE (Fully Integrated Robotized Engine):</strong> Motores (1.0, 1.2, 1.3 16v y 1.4 8v) caracterizados por su construcción robotizada, bajo peso y reducidos costos operativos.</li>
+                                <li><strong>Familia E.torQ:</strong> Bloques de 1.6 litros 16v y 115 CV que introdujeron mayor potencia y refinamiento acústico en evoluciones posteriores de la plataforma.</li>
+                            </ul>
+                        </div>
+
+                        <div class="border-l-2 border-primary/70 pl-3 py-1">
+                            <h3 class="font-headline-md text-sm font-bold text-white uppercase">Innovación Tecnológica y de Seguridad</h3>
+                            <ul class="list-disc list-inside text-sm text-on-surface-variant space-y-1 mt-1">
+                                <li><strong>Sistema Adventure Locker:</strong> En la versión Palio Weekend Adventure, Fiat introdujo el primer sistema de bloqueo mecánico de diferencial (<em>Locker</em>) en un vehículo de tracción delantera (4x2) producido en la región, permitiendo superar terrenos de baja adherencia sin el peso ni la complejidad de la tracción integral.</li>
+                                <li><strong>Tecnología Flex-Fuel y TetraFuel:</strong> La arquitectura fue pionera en propulsión alternativa con los motores Flex (etanol y gasolina) en Brasil y el desarrollo del Siena TetraFuel, capaz de gestionar electrónicamente nafta, etanol, gasohol y Gas Natural Comprimido (GNC) en un mismo sistema motriz.</li>
+                                <li><strong>Seguridad Popular:</strong> En 1996, el Palio se convirtió en el primer automóvil con motorización de 1.0 litro en la región en ofrecer frenos ABS y doble airbag frontal opcionales o de serie.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN 5: CIERRE 30 AÑOS -->
+                <section class="space-y-4 pt-2">
+                    <div class="bg-gradient-to-br from-primary/15 via-surface-container to-surface-container border-2 border-primary/80 rounded-2xl p-5 sm:p-7 shadow-xl space-y-4">
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary text-2xl">celebration</span>
+                            <span class="font-mono text-xs font-bold text-primary uppercase tracking-widest">HOMENAJE HISTÓRICO • 1996 - 2026</span>
+                        </div>
+
+                        <h2 class="font-headline-md text-xl sm:text-2xl text-white font-bold uppercase tracking-tight">
+                            5. Un Legado Industrial Insuperable: 30 Años de Historia (1996 - 2026)
+                        </h2>
+
+                        <p class="text-sm sm:text-base text-on-surface leading-relaxed">
+                            A tres décadas exactas del debut industrial del Fiat Palio en abril de 1996, el <strong>Proyecto 178 conmemora sus 30 años de vida</strong>. Lo que comenzó como un osado plan estratégico en los despachos de Turín se consolidó como uno de los mayores sucesos de la industria automotriz global, con más de dos décadas en las líneas de montaje de cuatro continentes y millones de unidades rodando por todo el planeta.
+                        </p>
+
+                        <p class="text-sm sm:text-base text-on-surface leading-relaxed">
+                            A 30 años de su nacimiento, el Proyecto 178 trasciende la categoría de mero producto comercial para erigirse en un auténtico hito de la ingeniería y la cultura popular. Supo ser la herramienta de trabajo incansable, el vehículo de las primeras vacaciones y el fiel compañero de generaciones de familias en todo el mundo. Hoy, la comunidad internacional y los miembros del <strong>Club del Palio</strong> rinden homenaje a esa nobleza mecánica incombustible, celebrando tres décadas de una pasión que nació en Italia, conquistó el mundo y sigue más viva que nunca sobre el asfalto.
+                        </p>
+                    </div>
+                </section>
+
+            </div>
+            </div><!-- FIN VISTA PROYECTO 178 -->
+
+            <!-- VISTA 2: ARTÍCULO MOTOR FIRE (Con Foto 16:9 Oficial Real y Título Corregido) -->
+            <div id="article-view-motorfire" class="blog-article-view space-y-6 hidden">
+                <!-- Encabezado del Artículo -->
+                <div class="space-y-3 border-b border-outline-variant/30 pb-6">
+                    <div class="flex flex-wrap items-center gap-2 font-mono text-xs text-primary font-bold">
+                        <span>TÉRMOLI & CÓRDOBA</span>
+                        <span>•</span>
+                        <span>FIAT POWERTRAIN (FPT)</span>
+                        <span>•</span>
+                        <span class="text-white bg-primary/20 border border-primary/40 px-2 py-0.5 rounded">HISTORIA & MECÁNICA</span>
+                    </div>
+                    
+                    <h1 class="font-headline-lg text-2xl sm:text-3xl md:text-4xl text-white font-extrabold uppercase tracking-tight leading-tight">
+                        Corazón de hierro: La historia del motor Fiat FIRE, de la revolución robótica de Turín al rey del asfalto argentino
+                    </h1>
+
+                    <p class="font-body-lg text-base sm:text-lg text-on-surface-variant font-medium leading-relaxed italic border-l-4 border-primary pl-4 py-1">
+                        Nacido en las líneas robotizadas italianas como un hito de la automatización industrial, el motor <strong>FIRE</strong> cruzó el océano para convertirse en el corazón mecánico más vendido, noble y duradero de las calles argentinas.
+                    </p>
+
+                    <div class="flex items-center gap-3 pt-2 text-xs font-mono text-on-surface-variant">
+                        <span>Por: <strong>Redacción Club del Palio</strong></span>
+                        <span>•</span>
+                        <span>Evolución: <strong>FIRE 1.3 16v / 1.4 8v / 1.4 EVO</strong></span>
+                    </div>
+                </div>
+
+                <!-- Imagen Destacada del Vano Motor Real en 16:9 -->
+                <div class="space-y-2">
+                    <div class="rounded-xl overflow-hidden border border-outline-variant/40 shadow-xl bg-black">
+                        <img loading="lazy" decoding="async" src="img/blog/motor_fire_real_cover.webp" alt="Vano motor Fiat FIRE 1.4 8v en Fiat Palio" class="w-full h-auto max-h-[480px] object-cover object-center">
+                    </div>
+                    <p class="text-center font-mono text-xs text-on-surface-variant italic">
+                        Vano motor de un Fiat Palio equipado con propulsor FIRE 1.4 8v: múltiple de admisión transversal, bobinas directas y accesibilidad mecánica comprobada.
+                    </p>
+                </div>
+
+                <!-- Cuerpo del Artículo Completo (Para lectura y cálculo dinámico) -->
+                <div id="fire-article-full-text" class="space-y-8 text-on-surface/90 font-body-md text-base sm:text-lg leading-relaxed">
+                    
+                    <!-- SECCIÓN 1 -->
+                    <section class="space-y-3">
+                        <h2 class="font-headline-md text-xl sm:text-2xl text-primary font-bold uppercase tracking-tight flex items-center gap-2">
+                            <span class="w-1.5 h-6 bg-primary rounded-full inline-block"></span>
+                            1985: La revolución F.I.R.E. en Térmoli
+                        </h2>
+                        <p>
+                            En marzo de 1985, la planta italiana de Térmoli presenció el nacimiento de una mecánica que transformó la industria automotriz global: el motor <strong>FIRE</strong>, acrónimo de <em>Fully Integrated Robotised Engine</em>. Desarrollado bajo la dirección de los ingenieros Stefano Iacoponi y Rodolfo Bonetto, el proyecto buscaba crear una unidad motriz liviana, eficiente y confiable para sustituir a las viejas familias mecánicas de la marca, como el histórico bloque FIASA concebido por Aurelio Lampredi y los motores de la serie Tipo.
+                        </p>
+                        <p>
+                            La auténtica revolución del motor FIRE no residió solo en sus parámetros térmicos, sino en la <strong>transformación industrial de su fabricación</strong>. Fiat aplicó avanzados programas de diseño asistido por computadora (CAD) y análisis de elementos finitos, junto con el método Policast mediante moldes de poliestireno expandido. Esta tecnología permitió moldear un bloque de hierro fundido con paredes de solo <strong>4 mm de espesor</strong>, registrando un peso en seco de apenas <strong>18 kg para el bloque</strong> y <strong>69 kg para el conjunto completo</strong>.
+                        </p>
+                        <p>
+                            El ensamblaje se confió al sistema "Robogate" con robots Comau, alcanzando una <strong>automatización del 100%</strong> que suprimió el margen de error humano y redujo a la mitad el tiempo de producción. Con solo <strong>273 componentes</strong> —un <strong>30% menos de piezas móviles</strong> y unos 2.200 elementos menos que sus antecesores de válvulas a la cabeza—, el motor FIRE disminuyó el rozamiento interno, aumentó la eficiencia y erradicó fallas mecánicas crónicas, dando un <strong>salto cuántico en confiabilidad</strong>.
+                        </p>
+                    </section>
+
+                    <!-- SECCIÓN 2 -->
+                    <section class="space-y-4">
+                        <h2 class="font-headline-md text-xl sm:text-2xl text-primary font-bold uppercase tracking-tight flex items-center gap-2">
+                            <span class="w-1.5 h-6 bg-primary rounded-full inline-block"></span>
+                            La familia FIRE en el Fiat Palio: Evolución y motorizaciones en Argentina
+                        </h2>
+                        <p>
+                            La incorporación de la familia FIRE en la línea del Fiat Palio a principios del siglo XXI marcó un salto cualitativo decisivo para el modelo fabricado en Ferreyra (Córdoba) y en Betim (Brasil). A lo largo de los años, sus variantes se adaptaron a cada perfil de conductor:
+                        </p>
+
+                        <!-- Tarjetas de las 3 Variantes -->
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-3 pt-1">
+                            <div class="bg-surface-container p-4 rounded-xl border border-outline-variant/40 space-y-1.5">
+                                <span class="font-mono text-xs font-bold text-primary block">FASE II (G2 / G3)</span>
+                                <h3 class="font-headline-md text-sm font-bold text-white uppercase">FIRE 1.3 16v (82 CV)</h3>
+                                <p class="text-xs text-on-surface-variant">
+                                    <strong>El despertar multiválvulas:</strong> Propulsor de 1242 cc con tapa de aluminio, DOHC y 16 válvulas (66 CV/litro). Agilidad pura y respuesta alegre en altas revoluciones.
+                                </p>
+                            </div>
+                            <div class="bg-surface-container p-4 rounded-xl border-2 border-primary/70 space-y-1.5 shadow-md">
+                                <span class="font-mono text-xs font-bold text-primary block">EL MÁS VENDIDO</span>
+                                <h3 class="font-headline-md text-sm font-bold text-white uppercase">FIRE 1.4 8v (82–85 CV)</h3>
+                                <p class="text-xs text-on-surface-variant">
+                                    <strong>El Rey Argentino:</strong> Máximo torque a bajas RPM (122 Nm a 3.500 rpm). La elección unánime de taxistas, remiseros y usuarios con GNC por su durabilidad indestructible.
+                                </p>
+                            </div>
+                            <div class="bg-surface-container p-4 rounded-xl border border-outline-variant/40 space-y-1.5">
+                                <span class="font-mono text-xs font-bold text-primary block">NUEVO PALIO (TYP 326)</span>
+                                <h3 class="font-headline-md text-sm font-bold text-white uppercase">FIRE 1.4 EVO (85–88 CV)</h3>
+                                <p class="text-xs text-on-surface-variant">
+                                    <strong>La modernización:</strong> Sumó variador continuo de fase (CVVT), pistones de baja fricción y bielas fracturadas, cumpliendo normas Euro IV y V con bajo consumo.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- SECCIÓN 3 -->
+                    <section class="space-y-4">
+                        <h2 class="font-headline-md text-xl sm:text-2xl text-primary font-bold uppercase tracking-tight flex items-center gap-2">
+                            <span class="w-1.5 h-6 bg-primary rounded-full inline-block"></span>
+                            Secretos del taller y mística popular
+                        </h2>
+                        <p>
+                            En el uso diario del parque automotor argentino, el motor FIRE cimentó su fama gracias a su <strong>matrimonio inseparable con el GNC (Gas Natural Comprimido)</strong>. La cualidad metalúrgica de su tapa de cilindros y la resistencia térmica de sus asientos de válvulas permitieron que miles de unidades superaran los <strong>300.000 kilómetros a gas</strong> sin presentar deformaciones estructurales.
+                        </p>
+                        <p>
+                            En el taller mecánico, la arquitectura de 8 válvulas destaca por la <strong>fluidez de su mantenimiento</strong>. El reemplazo de la correa de distribución es un trabajo directo que no requiere complejas herramientas de calado, mientras que el recambio de la bomba de agua resulta sumamente accesible. Apoyado en una producción global superior a los <strong>23,2 millones de unidades</strong>, la disponibilidad de repuestos en Argentina es universal y económica, garantizando que cualquier mecánico del país conozca su puesta a punto a la perfección.
+                        </p>
+                    </section>
+
+                    <!-- SECCIÓN 4 (TÍTULO CORREGIDO: 2001 - 2020) -->
+                    <section class="space-y-4 pt-2">
+                        <div class="bg-gradient-to-br from-primary/15 via-surface-container to-surface-container border-2 border-primary/80 rounded-2xl p-5 sm:p-7 shadow-xl space-y-4">
+                            <div class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary text-2xl">verified</span>
+                                <span class="font-mono text-xs font-bold text-primary uppercase tracking-widest">DOS DÉCADAS EN EL PALIO • 2001 - 2020</span>
+                            </div>
+
+                            <h2 class="font-headline-md text-xl sm:text-2xl text-white font-bold uppercase tracking-tight">
+                                El legado en el Palio y el cierre de una era (2001 – 2020)
+                            </h2>
+
+                            <p class="text-sm sm:text-base text-on-surface leading-relaxed">
+                                A lo largo de casi dos décadas continuas en las líneas de montaje regionales (desde su estreno en el Palio Fase II a comienzos de siglo hasta el cese de producción de la emblemática unidad 8v en 2020), el motor FIRE impulsó a millones de Fiat Palio, Siena y Weekend por todas las rutas de Argentina y Sudamérica.
+                            </p>
+
+                            <p class="text-sm sm:text-base text-on-surface leading-relaxed">
+                                Para la comunidad del <strong>Club del Palio Argentina</strong>, el FIRE trascendió la ficha técnica para convertirse en un <strong>símbolo de previsibilidad económica, nobleza mecánica y fidelidad diaria</strong>. Un homenaje con honores al motor que motorizó a generaciones enteras y que mantiene un lugar eterno en la historia automotriz argentina.
+                            </p>
+
+                            <!-- Mención Editorial de IA (Transparencia & Curaduría) -->
+                            <div class="mt-4 pt-3 border-t border-outline-variant/30 flex items-start gap-2.5 text-xs font-mono text-on-surface-variant/90">
+                                <span class="material-symbols-outlined text-base text-primary shrink-0 mt-0.5">smart_toy</span>
+                                <p class="leading-relaxed">
+                                    <strong class="text-white">Nota editorial:</strong> Contenido histórico y técnico estructurado con asistencia de Inteligencia Artificial (NotebookLM), bajo minuciosa revisión documental y curaduría editorial por parte del equipo de <strong>Club del Palio Argentina</strong>.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+            </div><!-- FIN VISTA MOTOR FIRE -->
+
+
+            <!-- Footer del Modal con Acciones -->
+            <div class="pt-6 border-t border-outline-variant/40 flex flex-wrap items-center justify-between gap-4">
+                <button type="button" onclick="closeBlogModal()" class="px-5 py-2.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-headline-md text-xs font-bold uppercase tracking-wider transition-colors border border-outline-variant/60 cursor-pointer flex items-center gap-2">
+                    <span class="material-symbols-outlined text-sm">arrow_back</span>
+                    <span>Volver a la Web</span>
+                </button>
+
+                <div class="flex items-center gap-2">
+                    <button type="button" onclick="shareArticleWhatsApp()" class="px-4 py-2 rounded-full bg-[#25D366]/20 hover:bg-[#25D366] text-[#25D366] hover:text-white border border-[#25D366]/40 font-mono text-xs font-bold uppercase tracking-wider transition-colors flex items-center gap-1.5 cursor-pointer">
+                        <span class="material-symbols-outlined text-sm">share</span>
+                        <span>Compartir</span>
+                    </button>
+                    <button type="button" onclick="copyArticleLink()" id="copy-article-btn" class="px-4 py-2 rounded-full bg-surface-container hover:bg-primary text-on-surface hover:text-white border border-outline-variant/50 font-mono text-xs font-bold uppercase tracking-wider transition-colors flex items-center gap-1.5 cursor-pointer">
+                        <span class="material-symbols-outlined text-sm">link</span>
+                        <span>Copiar Enlace</span>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
 <script>
     // Dynamic News Graph Ticker — Desplazamiento Horizontal Estilo Noticiero
     (function initNewsTicker() {
@@ -3761,6 +4374,186 @@
             }
         });
     })();
+
+    // Blog Reader: Cálculo Dinámico de Lectura y Control Multimonitor del Visor In-Page
+    function calcReadingTimeFor(elementId) {
+        const el = document.getElementById(elementId);
+        if (!el) return 5;
+        const text = el.innerText || el.textContent || '';
+        const words = text.trim().split(/\s+/).filter(Boolean).length;
+        return Math.max(1, Math.ceil(words / 200));
+    }
+
+    function initBlogReader() {
+        // Calcular tiempo de Proyecto 178
+        const p178Minutes = calcReadingTimeFor('blog-article-full-text');
+        document.querySelectorAll('.blog-reading-time-badge').forEach(b => {
+            b.textContent = `${p178Minutes} min de lectura`;
+        });
+
+        // Calcular tiempo de Motor FIRE
+        const fireMinutes = calcReadingTimeFor('fire-article-full-text');
+        document.querySelectorAll('.fire-reading-badge').forEach(b => {
+            b.textContent = `${fireMinutes} min de lectura`;
+        });
+    }
+
+    const blogModal = document.getElementById('blog-modal');
+    const blogModalContainer = document.getElementById('blog-modal-container');
+    let activeArticleId = 'proyecto178';
+
+    function openBlogModal(articleId = 'proyecto178') {
+        if (!blogModal || !blogModalContainer) return;
+        activeArticleId = articleId;
+
+        const p178View = document.getElementById('article-view-proyecto178');
+        const fireView = document.getElementById('article-view-motorfire');
+        const scrollContainer = document.getElementById('blog-modal-scrollable');
+        const categoryBadge = document.getElementById('blog-modal-category-badge');
+        const headerTimeBadge = document.getElementById('blog-modal-header-time-badge');
+
+        const p178Minutes = calcReadingTimeFor('blog-article-full-text') || 6;
+        const fireMinutes = calcReadingTimeFor('fire-article-full-text') || 5;
+
+        if (articleId === 'motorfire') {
+            if (p178View) p178View.classList.add('hidden');
+            if (fireView) fireView.classList.remove('hidden');
+            if (categoryBadge) categoryBadge.textContent = 'HISTORIA & MECÁNICA';
+            if (headerTimeBadge) headerTimeBadge.textContent = `${fireMinutes} min de lectura`;
+        } else {
+            if (fireView) fireView.classList.add('hidden');
+            if (p178View) p178View.classList.remove('hidden');
+            if (categoryBadge) categoryBadge.textContent = 'HISTORIA INDUSTRIAL';
+            if (headerTimeBadge) headerTimeBadge.textContent = `${p178Minutes} min de lectura`;
+        }
+
+        if (scrollContainer) scrollContainer.scrollTop = 0;
+
+        initBlogReader();
+
+        blogModal.classList.remove('opacity-0', 'pointer-events-none');
+        blogModal.classList.add('opacity-100', 'pointer-events-auto');
+        blogModalContainer.classList.remove('scale-95');
+        blogModalContainer.classList.add('scale-100');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeBlogModal() {
+        if (!blogModal || !blogModalContainer) return;
+        blogModalContainer.classList.remove('scale-100');
+        blogModalContainer.classList.add('scale-95');
+        blogModal.classList.remove('opacity-100', 'pointer-events-auto');
+        blogModal.classList.add('opacity-0', 'pointer-events-none');
+        document.body.style.overflow = '';
+    }
+
+    if (blogModal) {
+        blogModal.addEventListener('click', (e) => {
+            if (e.target === blogModal) closeBlogModal();
+        });
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && blogModal && !blogModal.classList.contains('pointer-events-none')) {
+            closeBlogModal();
+        }
+    });
+
+    function shareArticleWhatsApp() {
+        const title = (activeArticleId === 'motorfire')
+            ? encodeURIComponent("Corazón de hierro: La historia del motor Fiat FIRE")
+            : encodeURIComponent("Proyecto 178: La ingeniería global e industrial que redefinió a Fiat en cuatro continentes");
+        const url = encodeURIComponent(window.location.origin + window.location.pathname + "#blog");
+        window.open(`https://api.whatsapp.com/send?text=${title}%20${url}`, '_blank');
+    }
+
+    function copyArticleLink() {
+        const url = window.location.origin + window.location.pathname + "#blog";
+        if (navigator.clipboard) {
+            navigator.clipboard.writeText(url).then(() => {
+                const btn = document.getElementById('copy-article-btn');
+                if (btn) {
+                    const original = btn.innerHTML;
+                    btn.innerHTML = '<span class="material-symbols-outlined text-sm">check</span><span>¡Copiado!</span>';
+                    setTimeout(() => { btn.innerHTML = original; }, 2000);
+                }
+            }).catch(() => {});
+        }
+    }
+
+    // Navegación e interacción del Carrusel Principal con Pastillas
+    function initBlogMainCarousel() {
+        const track = document.getElementById('blog-main-track');
+        const prevBtn = document.getElementById('blog-carousel-prev-btn');
+        const nextBtn = document.getElementById('blog-carousel-next-btn');
+        const counter = document.getElementById('blog-carousel-counter');
+        const tabs = document.querySelectorAll('.blog-tab-pill');
+        if (!track || !prevBtn || !nextBtn || !counter) return;
+
+        const totalArticles = 2; // Artículos reales
+
+        function getCardWidth() {
+            const card = track.querySelector('article');
+            return card ? card.offsetWidth + 24 : track.clientWidth;
+        }
+
+        function updateState() {
+            const scrollLeft = track.scrollLeft;
+            const cardWidth = getCardWidth();
+            const currentIndex = Math.min(2, Math.max(0, Math.round(scrollLeft / cardWidth)));
+            
+            if (currentIndex < totalArticles) {
+                counter.textContent = `${currentIndex + 1 < 10 ? '0' : ''}${currentIndex + 1} / 0${totalArticles}`;
+            } else {
+                counter.textContent = `03 / 03`;
+            }
+
+            tabs.forEach(tab => {
+                const targetSlide = tab.getAttribute('data-slide');
+                const isActive = (targetSlide === String(currentIndex)) || (targetSlide === 'all' && currentIndex === 0);
+                if (isActive) {
+                    tab.classList.add('border-primary', 'bg-primary/15', 'text-primary', 'shadow-[0_0_15px_rgba(255,59,48,0.35)]');
+                    tab.classList.remove('border-outline-variant/50', 'text-on-surface-variant');
+                } else {
+                    tab.classList.remove('border-primary', 'bg-primary/15', 'text-primary', 'shadow-[0_0_15px_rgba(255,59,48,0.35)]');
+                    tab.classList.add('border-outline-variant/50', 'text-on-surface-variant');
+                }
+            });
+        }
+
+        prevBtn.addEventListener('click', () => {
+            const cardWidth = getCardWidth();
+            track.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+        });
+
+        nextBtn.addEventListener('click', () => {
+            const cardWidth = getCardWidth();
+            track.scrollBy({ left: cardWidth, behavior: 'smooth' });
+        });
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const targetSlide = tab.getAttribute('data-slide');
+                const cardWidth = getCardWidth();
+                if (targetSlide === 'all' || targetSlide === '0') {
+                    track.scrollTo({ left: 0, behavior: 'smooth' });
+                } else {
+                    const slideIndex = parseInt(targetSlide, 10);
+                    track.scrollTo({ left: cardWidth * slideIndex, behavior: 'smooth' });
+                }
+            });
+        });
+
+        track.addEventListener('scroll', updateState, { passive: true });
+        updateState();
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        initBlogReader();
+        initBlogMainCarousel();
+    });
+    initBlogReader();
+    initBlogMainCarousel();
 
 </script>
 
